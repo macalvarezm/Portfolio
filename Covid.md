@@ -3,7 +3,7 @@ From PortfolioProject..[Covid Deaths]
 Where continent is not null
 Order by 3,4
 
---SelecciÛn de informaciÛn que se va a usar--
+--Selecci√≥n de informaci√≥n que se va a usar--
 Select location, date, total_cases, new_cases, total_deaths, population
 From PortfolioProject..[Covid Deaths]
 Where continent is not null
@@ -24,9 +24,9 @@ Where location = 'Uruguay'
 and continent is not null
 Order by 1,2 desc
 
---Casos totales vs poblaciÛn
+--Casos totales vs poblaci√≥n
 
---Muestra el porcentaje de la poblaciÛn infectada en Argentina
+--Muestra el porcentaje de la poblaci√≥n infectada en Argentina
  
 Select location, date, total_cases, new_cases, population, (total_cases/population)*100 as PercentPopulationInfected
 From PortfolioProject..[Covid Deaths]
@@ -34,7 +34,7 @@ Where location = 'Argentina'
 and continent is not null
 Order by 1,2
 
---Muestra el porcentaje de la poblaciÛn infectada en Uruguay
+--Muestra el porcentaje de la poblaci√≥n infectada en Uruguay
  
 Select location, date, total_cases, new_cases, population, (total_cases/population)*100 as PercentPopulationInfected
 From PortfolioProject..[Covid Deaths]
@@ -42,7 +42,7 @@ Where location = 'Uruguay'
 and continent is not null
 Order by 1,2
 
---PaÌses con mayor tasa de infecciÛn comparado con la poblaciÛn--
+--Pa√≠ses con mayor tasa de infecci√≥n comparado con la poblaci√≥n--
 Select location, population , MAX(total_cases) as HighestInfectionCount, max((total_cases/population))*100 as PercentPopulationInfected
 From PortfolioProject..[Covid Deaths]
 --Where location = 'Argentina'
@@ -50,7 +50,7 @@ Where continent is not null
 Group by location, population
 Order by PercentPopulationInfected desc
 
---PaÌses con mayor cantidad de muertes por poblaciÛn
+--Pa√≠ses con mayor cantidad de muertes por poblaci√≥n
 Select location, MAX(cast(total_deaths as int)) as TotalDeathsCount
 From PortfolioProject..[Covid Deaths]
 --Where location like '%Argentina%'--
@@ -58,9 +58,9 @@ Where continent is not null
 Group by location
 Order by TotalDeathsCount desc
 
---An·lisis por continente--
+--An√°lisis por continente--
 
---Continente con la mayor cantidad de muertos por poblaciÛn
+--Continente con la mayor cantidad de muertos por poblaci√≥n
 Select continent, MAX(cast(total_deaths as int)) as TotalDeathsCount
 From PortfolioProject..[Covid Deaths]
 --Where location like '%Argentina%'--
@@ -68,7 +68,7 @@ Where continent is not null
 Group by continent
 Order by TotalDeathsCount desc
 
---PaÌs de AmÈrica del Sur con la mayor cantidad de muertos 
+--Pa√≠s de Am√©rica del Sur con la mayor cantidad de muertos 
 Select location, Max(cast(total_deaths as int)) as TotalDeathsCount
 From PortfolioProject..[Covid Deaths]
 Where continent ='South America' 
@@ -91,15 +91,15 @@ From PortfolioProject..[Covid Vaccinations]
 Where location= 'World'
 Group by location
 
--- Cantidad de vacunas aplicadas por paÌs
+-- Cantidad de vacunas aplicadas por pa√≠s
 Select continent, location, sum(cast(total_vaccinations as bigint) ) as total_vaccinationscount , sum(cast(new_vaccinations as bigint)) as total_newvac
 From PortfolioProject..[Covid Vaccinations]
 Where continent is not null
 Group by location, continent
 Order by total_vaccinationscount desc
 
---PoblaciÛn total vs VacunaciÛn
---Porcentaje de la poblaciÛn que recibiÛ al menos una dosis
+--Poblaci√≥n total vs Vacunaci√≥n
+--Porcentaje de la poblaci√≥n que recibi√≥ al menos una dosis
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations
 , SUM(CONVERT(bigint,vac.new_vaccinations)) OVER (Partition by dea.Location Order by dea.location, dea.Date) as Rolling_PeopleVaccinated
 From PortfolioProject..[Covid Deaths] dea
@@ -154,7 +154,7 @@ Order by Date desc
 
 --Creando vistas
 Create View 
-PorcentajePoblaciÛnVacunada as
+PorcentajePoblaci√≥nVacunada as
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations
 , SUM(CONVERT(bigint,vac.new_vaccinations)) OVER (Partition by dea.Location Order by dea.location, dea.Date) as RollingPeopleVaccinated
 --, (RollingPeopleVaccinated/population)*100
@@ -166,5 +166,5 @@ where dea.continent is not null
 
 /*
 Select *
-From PorcentajePoblaciÛnVacunada 
+From PorcentajePoblaci√≥nVacunada 
 /*
