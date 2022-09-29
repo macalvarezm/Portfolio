@@ -9,4 +9,4 @@ Para la visualización de los datos se usó Power Bi.
 Análisis de los incendios forestales en Argentina desde 1993 hasta 2019.
 
 ## [Data Science Coderhouse](https://github.com/macalvarezm/Portfolio/tree/main/Data%20Science%20CoderHouse)
-Desafíos de la cursada usando las librerías Numpy, Matplotlib, Pandas y Seaborn.
+Se encuentran los desafíos de la cursada y el proyecto final que analiza a las empresas unicornio.
