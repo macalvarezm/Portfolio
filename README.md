@@ -1,12 +1,16 @@
 # Portfolio
 
-## [COVID](https://github.com/macalvarezm/Portfolio/tree/main/COVID)
-Análisis de las vacunaciones y muertes en el mundo, usando SQL.
+## 📚 Learning Journey
 
-Para la visualización de los datos se usó Power Bi.
+Proyectos de aprendizaje en Data Analytics y SQL.
 
-## [Data Analytics Coderhouse](https://github.com/macalvarezm/Portfolio/tree/main/ProyectoFinal_DA_CODERHOUSE)
-Análisis de los incendios forestales en Argentina desde 1993 hasta 2019.
+## 🌿 Branches
+- **main:** Proyectos actuales
+- **archive:** Proyectos de aprendizaje (CoderHouse, Udemy)
 
-## [Data Science Coderhouse](https://github.com/macalvarezm/Portfolio/tree/main/Data%20Science%20CoderHouse)
-Se encuentran los desafíos de la cursada y el proyecto final que analiza a las empresas unicornio.
+## 🛠️ Tech
+SQL | Python | BigQuery | Power BI | Excel
+
+---
+
+*Más por venir...*
