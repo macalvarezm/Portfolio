@@ -2,15 +2,15 @@
 
 ## 📚 Learning Journey
 
-Proyectos de aprendizaje en Data Analytics y SQL.
+Data Analytics and SQL projects.
 
 ## 🌿 Branches
-- **main:** Proyectos actuales
-- **archive:** Proyectos de aprendizaje (CoderHouse, Udemy)
+- **main:** Current projects
+- **archive:** Learning projects (CoderHouse, Udemy)
 
-## 🛠️ Tech
+## 🛠️ Tech Stack
 SQL | Python | BigQuery | Power BI | Excel
 
 ---
 
-*Más por venir...*
+*More coming soon...*
