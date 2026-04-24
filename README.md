@@ -1,16 +1,25 @@
-# Portfolio
+# Portfolio  
 
-## 📚 Learning Journey
+## 📊 Data Analytics Projects  
 
-Data Analytics and SQL projects.
-
-## 🌿 Branches
-- **main:** Current projects
-- **archive:** Learning projects (CoderHouse, Udemy)
-
-## 🛠️ Tech Stack
-SQL | Python | BigQuery | Power BI | Excel
+This repository contains my data analytics learning projects, including coursework and practical exercises.
 
 ---
 
-*More coming soon...*
+## 📁 Projects  
+
+### Coderhouse  
+Projects developed during the Data Analytics course, including:  
+- Data cleaning and transformation  
+- SQL queries and analysis  
+- Basic data visualization  
+
+---
+
+## 🛠️ Tools & Technologies  
+SQL | Excel | Power BI  
+
+---
+
+## 📌 Notes  
+This portfolio is currently being updated with new projects.
